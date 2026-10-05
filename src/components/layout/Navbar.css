@@ -1,0 +1,18 @@
+.nav-wrap { position: sticky; top: 0; z-index: 20; background: var(--page); border-bottom: 1px solid var(--border); }
+.navbar { height: 86px; display: flex; align-items: center; gap: 36px; }
+.brand { text-decoration: none; font-size: 23px; font-weight: 600; letter-spacing: -1px; }
+.brand span { color: var(--accent); }
+.nav-links { display: flex; gap: 32px; margin-left: auto; }
+.nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; padding-block: 14px; }
+.nav-links a:hover { color: var(--text); }
+.nav-actions { display: flex; }
+.theme-toggle, .menu-toggle { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; }
+.theme-toggle:hover, .menu-toggle:hover { background: var(--surface-raised); }
+.menu-toggle { display: none; }
+@media (max-width: 600px) {
+  .navbar { height: 72px; justify-content: space-between; }
+  .menu-toggle { display: grid; }
+  .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--page); border-bottom: 1px solid var(--border); padding: 16px 24px 24px; }
+  .nav-links.is-open { display: grid; gap: 6px; }
+  .nav-links a { font-size: 16px; }
+}

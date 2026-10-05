@@ -1,0 +1,9 @@
+.stack-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
+.stack-card h3 { color: var(--text); margin: 0 0 22px; font-size: 12px; font-weight: 500; }
+.stack-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.stack-card li { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+.additional-skills { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 35px; padding-top: 24px; border-top: 1px solid var(--border); }
+.additional-skills span { color: var(--muted); font-size: 11px; margin-right: 8px; }
+.additional-skills b { color: var(--muted); font-size: 10px; font-weight: 400; padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px; }
+@media (max-width: 900px) { .stack-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 20px; } }
+@media (max-width: 600px) { .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

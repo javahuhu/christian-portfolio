@@ -1,0 +1,14 @@
+.project-dialog { width: min(920px, calc(100% - 32px)); max-height: calc(100dvh - 48px); margin: auto; padding: 0; color: var(--text); background: var(--page); border: 1px solid var(--border); border-radius: 12px; overscroll-behavior: contain; }
+.project-dialog::backdrop { background: #101710b3; backdrop-filter: blur(4px); }
+.project-dialog__content { padding: 28px; }
+.project-dialog__heading { display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px; }
+.project-dialog__heading .eyebrow { margin: 0 0 8px; }
+.project-dialog h2 { margin: 0; font-size: 32px; letter-spacing: -.04em; font-weight: 500; }
+.dialog-close { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: 50%; }
+.project-dialog__image { background: var(--surface-raised); padding: 12px; border-radius: 6px; text-align: center; }
+.project-dialog__image img { display: block; max-height: 55dvh; margin-inline: auto; object-fit: contain; }
+.project-dialog__image.is-mobile img { max-height: 60dvh; }
+.project-dialog h3 { font-size: 20px; font-weight: 500; margin: 24px 0 8px; }
+.project-dialog__description { font-size: 14px; line-height: 1.8; color: var(--muted); margin: 0 0 20px; }
+.project-dialog__repository { display: inline-block; margin-bottom: 20px; color: var(--accent); font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) { .project-dialog__content { padding: 20px; } }

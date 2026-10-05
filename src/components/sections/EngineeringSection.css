@@ -1,0 +1,8 @@
+.engineering-section { padding-block: 56px; }
+.engineering-section .section-title { font-size: 23px; }
+.approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.approach-card__icon { color: var(--accent); margin-bottom: 18px; }
+.approach-card h3 { margin: 0 0 10px; font-size: 13px; font-weight: 500; }
+.approach-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+@media (max-width: 750px) { .approach-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 380px) { .approach-grid { grid-template-columns: 1fr; } }

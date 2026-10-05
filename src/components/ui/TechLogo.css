@@ -1,0 +1,11 @@
+.tech-logo {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+.tech-logo img { position: relative; z-index: 1; width: 19px; height: 19px; object-fit: contain; }
+.tech-logo > span { position: absolute; color: var(--muted-2); font-size: 7px; font-weight: 700; }

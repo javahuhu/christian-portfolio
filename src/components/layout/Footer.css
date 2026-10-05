@@ -1,0 +1,5 @@
+.footer { display: flex; justify-content: space-between; gap: 24px; padding: 26px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 10px; align-items: center; }
+.footer p { margin: 0; }
+.footer a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.footer a:hover { color: var(--text); }
+@media (max-width: 600px) { .footer { gap: 16px; flex-wrap: wrap; } .footer > span { display: none; } }
