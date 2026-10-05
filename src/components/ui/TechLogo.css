@@ -8,4 +8,4 @@
   border-radius: 5px;
 }
 .tech-logo img { position: relative; z-index: 1; width: 19px; height: 19px; object-fit: contain; }
-.tech-logo > span { position: absolute; color: var(--muted-2); font-size: 7px; font-weight: 700; }
+:root[data-theme='dark'] .tech-logo--monochrome img { filter: invert(1); }

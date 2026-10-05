@@ -1,0 +1,20 @@
+.project-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 0 0 32px; padding: 24px 0; border-block: 1px solid var(--border); }
+.project-facts > div { display: flex; flex-direction: column; gap: 8px; }
+.project-facts dt { font-size: 11px; line-height: 1.6; color: var(--muted); }
+.project-facts dd { order: -1; margin: 0; font-size: clamp(19px, 3vw, 29px); font-weight: 500; letter-spacing: -.04em; }
+.project-story .eyebrow { margin: 0 0 12px; }
+.project-story p:not(.eyebrow) { color: var(--muted); font-size: 14px; line-height: 1.85; }
+.story-context { max-width: 740px; margin-bottom: 32px; }
+.story-context > p:last-child { margin: 0; }
+.project-story h3 { margin: 0 0 20px; font-size: 22px; line-height: 1.4; letter-spacing: -.025em; }
+.story-workflow { list-style: none; padding: 0; margin: 0 0 32px; }
+.story-workflow li { display: grid; grid-template-columns: 42px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.story-workflow li:first-child { padding-top: 0; }
+.story-step { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--surface-raised); color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; }
+.story-workflow h4 { margin: 3px 0 8px; font-size: 15px; font-weight: 500; }
+.story-workflow p { margin: 0; }
+.story-focus { padding: 24px; background: var(--surface-raised); border-radius: 10px; }
+.story-focus h3 { margin: 0 0 10px; }
+.story-focus p:last-child { margin: 0; }
+.project-story .story-note { font-size: 12px; margin: 20px 0 0; }
+@media (max-width: 600px) { .project-facts { gap: 12px; } .story-workflow li { gap: 12px; grid-template-columns: 32px 1fr; } .story-step { width: 30px; height: 30px; } .story-focus { padding: 20px; } }

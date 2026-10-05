@@ -2,6 +2,10 @@
 .stack-card h3 { color: var(--text); margin: 0 0 22px; font-size: 12px; font-weight: 500; }
 .stack-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
 .stack-card li { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+.stack-card li { transition: color .2s, transform .2s; }
+.stack-card li:hover { color: var(--text); transform: translateX(4px); }
+.stack-card li .tech-logo { transition: transform .25s; }
+.stack-card li:hover .tech-logo { transform: rotate(-8deg) scale(1.15); }
 .additional-skills { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 35px; padding-top: 24px; border-top: 1px solid var(--border); }
 .additional-skills span { color: var(--muted); font-size: 11px; margin-right: 8px; }
 .additional-skills b { color: var(--muted); font-size: 10px; font-weight: 400; padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px; }

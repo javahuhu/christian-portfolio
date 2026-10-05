@@ -5,6 +5,20 @@
 .availability i { height: 6px; width: 6px; border-radius: 50%; background: var(--accent); }
 .hero-section h1 { font-size: clamp(48px, 6.5vw, 84px); line-height: 1.09; letter-spacing: -.065em; font-weight: 500; margin: 43px 0 32px; }
 .hero-section h1 span { color: var(--muted-2); }
+.hero-title { position: relative; }
+.hero-title h1 { position: relative; z-index: 1; animation: hero-rise .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero-title h1 span { display: inline-block; animation: hero-rise .8s .12s cubic-bezier(.2,.7,.2,1) both; }
+.hero-spark { position: absolute; right: 18px; top: 25%; width: 65px; fill: var(--accent); opacity: .7; animation: spark-arrive 1.4s cubic-bezier(.2,.7,.2,1) both; }
+.hero-bottom { animation: hero-rise .8s .24s cubic-bezier(.2,.7,.2,1) both; }
+.availability i { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent); animation: availability-pulse 1.8s 2; }
+.hero-scroll { display: inline-flex; align-items: center; gap: 18px; margin-top: 38px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+.hero-scroll > span:last-child { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--border); border-radius: 50%; transition: transform .25s; }
+.hero-scroll:hover > span:last-child { transform: translateY(4px); }
+@keyframes hero-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes spark-arrive { from { opacity: 0; transform: rotate(-100deg) scale(.5); } to { opacity: .7; transform: rotate(0) scale(1); } }
+@keyframes availability-pulse { 50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 4%, transparent); } }
+@media (max-width: 1000px) { .hero-spark { width: 38px; right: 0; top: auto; bottom: 8px; } }
+@media (max-width: 600px) { .hero-spark { display: none; } }
 .hero-bottom { display: flex; justify-content: space-between; gap: 40px; align-items: end; }
 .hero-copy > p { max-width: 510px; color: var(--muted); font-size: 16px; line-height: 1.8; margin: 0; }
 .hero-actions { display: flex; align-items: center; gap: 26px; margin-top: 27px; }

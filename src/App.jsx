@@ -7,21 +7,23 @@ import { HeroSection } from './components/sections/HeroSection'
 import { ProjectsSection } from './components/sections/ProjectsSection'
 import { StackSection } from './components/sections/StackSection'
 import { useTheme } from './hooks/useTheme'
+import { Reveal } from './components/ui/Reveal'
 import './App.css'
 
 function App() {
   const { theme, toggleTheme } = useTheme()
   return (
     <div className="portfolio-shell">
+      <div className="reading-progress" aria-hidden="true"/>
       <a className="skip-link" href="#main">Skip to content</a>
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main className="site-content" id="main">
         <HeroSection />
         <ProjectsSection />
-        <AboutSection />
-        <EngineeringSection />
-        <StackSection />
-        <ContactSection />
+        <Reveal><AboutSection /></Reveal>
+        <Reveal><EngineeringSection /></Reveal>
+        <Reveal><StackSection /></Reveal>
+        <Reveal><ContactSection /></Reveal>
       </main>
       <Footer />
     </div>

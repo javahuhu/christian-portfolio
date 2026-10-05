@@ -1,0 +1,24 @@
+.device-frame { position: relative; width: 100%; margin-inline: auto; filter: drop-shadow(0 15px 14px #17251d24); }
+.device-body { position: relative; background: #242a29; border: 1px solid #59615b; padding: 7px; border-radius: 12px; box-shadow: inset 0 0 0 2px #343a36; }
+.device-browser { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 24px; padding: 0 10px; background: #e9ece9; color: #677169; border-radius: 5px 5px 0 0; font-size: 8px; }
+.device-browser__dots { display: flex; gap: 4px; }
+.device-browser__dots i { width: 4px; height: 4px; border-radius: 50%; background: #b0b7b0; }
+.device-browser__dots i:first-child { background: #df9c92; }
+.device-browser__dots i:nth-child(2) { background: #dcc486; }
+.device-browser__dots i:last-child { background: #99b8a0; }
+.device-browser__address { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.device-screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #fff; }
+.device-screen img { display: block; width: 100%; height: 100%; object-fit: contain; animation: screen-enter .35s ease both; }
+.device-screen--shop-document img { width: 105.3%; height: auto; max-width: none; transform: translate(-4.83%, -20.3%); }
+.device-chin { display: grid; place-items: center; height: 12px; }
+.device-chin i { width: 3px; height: 3px; border-radius: 50%; background: #8b9a8c; }
+.device-stand { position: relative; width: 20%; height: 28px; margin: 0 auto; background: linear-gradient(90deg, #afb5af, #d8dcd7 50%, #a7afa7); clip-path: polygon(30% 0, 70% 0, 78% 85%, 100% 92%, 100% 100%, 0 100%, 0 92%, 22% 85%); }
+.device-frame--phone { width: 128px; }
+.device-frame--phone .device-body { padding: 6px; border-radius: 25px; box-shadow: inset 0 0 0 2px #555d56, 0 2px 1px #131b15; }
+.device-frame--phone .device-screen { aspect-ratio: var(--screen-aspect, 572 / 1240); border-radius: 19px; }
+.device-frame--phone .device-screen img { object-fit: cover; }
+.device-camera { position: absolute; top: 10px; left: 50%; width: 27%; height: 6px; transform: translateX(-50%); background: #242a29; border-radius: 9px; }
+.device-frame--phone::before, .device-frame--phone::after { content: ''; position: absolute; top: 55px; width: 3px; height: 28px; background: #4b554d; border-radius: 3px; }
+.device-frame--phone::before { left: -2px; }
+.device-frame--phone::after { right: -2px; height: 38px; }
+@keyframes screen-enter { from { opacity: .35; } to { opacity: 1; } }
