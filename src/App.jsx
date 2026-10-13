@@ -9,11 +9,18 @@ import { StackSection } from './components/sections/StackSection'
 import { useTheme } from './hooks/useTheme'
 import { Reveal } from './components/ui/Reveal'
 import './App.css'
+import { FluidCursor } from './components/visuals/FluidCursor'
+import { ExperienceSection } from './components/sections/ExperienceSection'
+import './glass.css'
+import './motion.css'
+import { usePortfolioMotion } from './hooks/usePortfolioMotion'
 
 function App() {
+  const motionRef = usePortfolioMotion()
   const { theme, toggleTheme } = useTheme()
   return (
-    <div className="portfolio-shell">
+    <div ref={motionRef} className="portfolio-shell">
+      <FluidCursor />
       <div className="reading-progress" aria-hidden="true"/>
       <a className="skip-link" href="#main">Skip to content</a>
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
@@ -21,6 +28,7 @@ function App() {
         <HeroSection />
         <ProjectsSection />
         <Reveal><AboutSection /></Reveal>
+        <Reveal><ExperienceSection /></Reveal>
         <Reveal><EngineeringSection /></Reveal>
         <Reveal><StackSection /></Reveal>
         <Reveal><ContactSection /></Reveal>

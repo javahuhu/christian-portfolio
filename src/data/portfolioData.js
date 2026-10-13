@@ -36,20 +36,15 @@ export const profile = {
 export const navigationItems = [
   ['Work', 'projects'],
   ['About', 'about'],
+  ['Experience', 'experience'],
   ['Stack', 'stack'],
   ['Contact', 'contact'],
 ]
 
 export const metrics = [
   ['10+', 'ERP Modules Delivered'],
-  ['30%+', 'Faster Report Queries'],
+  ['Web + Mobile', 'Cross-Platform Delivery'],
   ['3', 'PetSymp Analysis Methods'],
-]
-
-export const experienceTimeline = [
-  ['Mar–Apr 2025', 'Front End Developer', 'moodLearning · React interfaces, categorized search, API integration, and interactive media.'],
-  ['Aug 2025', 'B.S. Computer Science', 'Technological Institute of the Philippines · Dean’s Lister and VPAA’s Lister.'],
-  ['Dec 2025–Present', 'Full-Stack Developer', 'Amici Mercantile Inc. · Enterprise Flutter, FastAPI, Python, and MySQL systems.'],
 ]
 
 export const approachCards = [
@@ -191,6 +186,12 @@ export const stackGroups = [
 ]
 
 export const additionalSkills = [
+  'SQL',
+  'Scikit-Learn',
+  'Firebase Authentication',
+  'Cloud Firestore',
+  'Firebase Storage',
+  'Xcode',
   'Provider',
   'Riverpod',
   'React Hooks',

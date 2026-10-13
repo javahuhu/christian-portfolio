@@ -8,10 +8,8 @@ export function ProjectsSection() {
   const [filter, setFilter] = useState('All')
   const [activeProject, setActiveProject] = useState(null)
   const [initialImageIndex, setInitialImageIndex] = useState(0)
-  const [initialView, setInitialView] = useState('overview')
   function openProject(project, imageIndex) {
     setInitialImageIndex(imageIndex ?? 0)
-    setInitialView(imageIndex === undefined ? 'overview' : 'screens')
     setActiveProject(project)
   }
   const visibleProjects = selectedProjects.filter((project) => filter === 'All' || project.category === filter)
@@ -22,7 +20,7 @@ export function ProjectsSection() {
       </div>
       <p className="visually-hidden" role="status">Showing {visibleProjects.length} {filter.toLowerCase()} projects</p>
       <div className="project-grid">{visibleProjects.map((project) => <ProjectCard key={project.id} project={project} index={selectedProjects.indexOf(project)} onOpen={openProject}/>)}</div>
-      {activeProject && <ProjectDialog project={activeProject} initialIndex={initialImageIndex} initialView={initialView} onClose={() => setActiveProject(null)}/>}
+      {activeProject && <ProjectDialog project={activeProject} initialIndex={initialImageIndex} onClose={() => setActiveProject(null)}/>}
     </section>
   )
 }

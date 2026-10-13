@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { DeviceFrame } from './DeviceFrame'
 import './ProjectGallery.css'
+import { useGalleryMotion } from '../../hooks/useGalleryMotion'
 
 export function ProjectGallery({ project, onOpen, initialIndex = 0 }) {
   const [activeIndex, setActiveIndex] = useState(initialIndex)
+  const motionRef = useGalleryMotion(activeIndex, Boolean(onOpen))
   const images = project.images
   const activeImage = images[activeIndex]
   const hasMultiple = images.length > 1
@@ -17,7 +19,7 @@ export function ProjectGallery({ project, onOpen, initialIndex = 0 }) {
   }
   const frame = <DeviceFrame image={activeImage} category={project.category} title={project.title}/>
   return (
-    <div className={`project-gallery project-gallery--${project.id}${onOpen ? ' is-compact' : ''}`} role="region" aria-label={`${project.title} image gallery`} onKeyDown={handleKeyDown}>
+    <div ref={motionRef} className={`project-gallery project-gallery--${project.id}${onOpen ? ' is-compact' : ''}`} role="region" aria-roledescription="carousel" tabIndex={onOpen ? undefined : 0} aria-label={`${project.title} image gallery`} onKeyDown={handleKeyDown}>
       {onOpen ? <button className="gallery-stage" onClick={() => onOpen(project, activeIndex)} aria-label={`View ${project.title}: ${activeImage.caption}`}>
         {frame}<span className="preview-action" aria-hidden="true">Explore project ↗</span>
       </button> : <div className="gallery-stage">{frame}</div>}
